@@ -26,6 +26,11 @@ public class MarkdownParse {
             int openParen = markdown.indexOf("(", nextCloseBracket);
             int closeParen = markdown.indexOf(")", openParen);
 
+            // For test case 5 (test-file3)
+            if(closeParen == -1) {
+                break;
+            }
+
             // For test case 2 (bug for paren inside link)
             if(markdown.charAt(closeParen - 1) == '(') {
                 closeParen = markdown.indexOf(")", closeParen + 1);
