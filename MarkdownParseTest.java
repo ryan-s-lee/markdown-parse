@@ -2,6 +2,7 @@ import static org.junit.Assert.*;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Collections;
 import java.util.List;
 
 import org.junit.*;
@@ -37,7 +38,7 @@ public class MarkdownParseTest {
     public void testBreakFile3() throws IOException {
         Path fileName = Path.of("break3.md");
         String contents = Files.readString(fileName);
-        assertEquals(List.of("[]"), MarkdownParse.getLinks(contents));
+        assertEquals(Collections.EMPTY_LIST, MarkdownParse.getLinks(contents));
     }
 
     @Test
