@@ -26,8 +26,5 @@ jobs:
       - uses: actions/checkout@v2
       
       # compile java code just in case
-      - name: compile
-        run: javac -cp .:lib/* *.java
-        
-      - name: execute
-        run: java -cp .:lib/* org.junit.runner.JUnitCore MarkdownParseTest
+      - name: build
+        run: make
