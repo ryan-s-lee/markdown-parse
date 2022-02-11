@@ -48,12 +48,12 @@ public class MarkdownParseTest {
         assertEquals(List.of(), MarkdownParse.getLinks(contents));
     }
 
-//    @Test
-//    public void testBreakFile11() throws IOException {
-//        Path fileName = Path.of("break11.md");
-//        String contents = Files.readString(fileName);
-//        assertEquals(List.of(
-//                "https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574(v=vs.85)?redirectedfrom=MSDN)"),
-//                MarkdownParse.getLinks(contents));
-//    }
+   @Test
+   public void testBreakFile11() throws IOException {
+       Path fileName = Path.of("break11.md");
+       String contents = Files.readString(fileName);
+       assertEquals(List.of(
+               "https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574(v=vs.85)?redirectedfrom=MSDN"),
+               MarkdownParse.getLinks(contents));
+   }
 }
