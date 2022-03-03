@@ -14,6 +14,10 @@ public class MarkdownParseTest {
     }
 
     @Test
+    public void vimTest() {
+        assertEquals(true, true);
+    }
+    @Test
     public void testBreakFile0() throws IOException {
         Path fileName = Path.of("break0.md");
         String contents = Files.readString(fileName);
